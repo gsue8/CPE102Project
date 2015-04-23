@@ -352,7 +352,7 @@ class WorldModel:
 
 
    def remove_entity(self, entity):
-      for action in entity.get_pending_actions():   
+      for action in entity.get_pending_actions():
          self.unschedule_action(action)
       entity.clear_pending_actions()
       self.remove_entity_at(entity.get_position())
